@@ -15,7 +15,6 @@ Handlebars.registerHelper('arr', function (arr, index) {
 });
 
 function create(conf) {
-
     conf = util.extend({
         fontName: function () {
             return 'ddv' + ((new Date).getTime() + Math.floor(Math.random() * 1000)).toString(32);
@@ -31,6 +30,7 @@ function create(conf) {
     conf.ttfDir = path.normalize(conf.ttfDir);
 
     //计数器标识是否完成了全部异步操作
+    //+2是在等待生成配置文件，生成测试html
     var remainderCount = conf.amount + 2, failError = null;
 
     fs.readFile('./resources/tpl/' + conf.fontFamily + '.tpl', {encoding: 'utf8'}, function (err, data) {
@@ -51,9 +51,7 @@ function create(conf) {
                 if(exists){
                     return Q.Promise(
                         function (resolve) {
-                            clearDir(dir, function () {
-                                resolve();
-                            });
+                            clearDir(dir, resolve);
                         }
                     );
                 }else{

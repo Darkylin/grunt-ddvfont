@@ -12,25 +12,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     ddvfont: {
-      default_options: {
+      create: {
         options: {
-        },
-        files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+
         }
       }
     }
   });
 
-  grunt.loadTasks()
+  grunt.ddvfont = require('./ddv-gruntify')(grunt);
 
 };
