@@ -19,7 +19,6 @@ module.exports = function(grunt) {
       }
     }
   });
-
-  grunt.ddvfont = require('./ddv-gruntify')(grunt);
+  grunt.loadTasks('tasks');
 
 };
