@@ -1,0 +1,21 @@
+{
+  "name": "grunt-qunar-ddvfont",
+  "version": "1.0.0",
+  "author": [{
+    "name": "yuhuan.wang",
+    "email": "yuhuan.wang@qunar.com"
+  }],
+  "dependencies": {
+    "buffered-reader": "^1.0.1",
+    "clear-dir": "^1.0.1",
+    "fs-extra": "^0.14.0",
+    "handlebars": "^2.0.0",
+    "q": "^1.1.2",
+    "random-js": "^1.0.4",
+    "svg2ttf": "^1.2.0",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
