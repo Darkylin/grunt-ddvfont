@@ -9,7 +9,6 @@
 module.exports = function(grunt) {
 
     grunt.registerMultiTask('ddvfont', 'ddv for crawler', function() {
-        //console.log(this);
         var ddv = require('../lib/DDVcreator'),done=this.async();
         switch(this.target){
             case 'create':
