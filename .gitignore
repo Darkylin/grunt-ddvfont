@@ -39,5 +39,3 @@ temp/
 test.*
 test/
 *-test/
-*.ttf
-*.svg
