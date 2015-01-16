@@ -16,16 +16,28 @@
             font-family: {{@key}};
         }
         {{/each}}
-        .hel{
-            font-family: helvetica;
-            background: green;
+        tr:nth-child(even){
+            background: #cff2ff;
+        }
+        th{
+            background: #3e89a6;
+            color: #fff;
+        }
+        tr:last-child{
+            color: #007f16;
+            background: #95ec00;
+        }
+        table{
+            border-collapse:collapse;
         }
     </style>
 </head>
 <body>
+<table>
+<tr><th>展示效果（0123456789）</th><th>字体文件名</th></tr>
 {{#each this}}
-    <div class="{{@key}}">{{this}}</div>
+    <tr><td class="{{@key}}">{{this}}</td><td>{{@key}}.ttf</td></tr>
 {{/each}}
-<div class="hel">0123456789</div>
+</table>
 </body>
 </html>
